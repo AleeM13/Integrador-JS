@@ -33,7 +33,7 @@ const renderProduct = (product) => {
             <button class="btn-add"
                 data-id='${id}'
                 data-name='${name}'
-                data-prize='${price}'
+                data-price='${price}'
                 data-img='${img}'>Añadir</button>
         </div>
     </div>
@@ -141,7 +141,7 @@ const renderLanzamientos = (product) => {
               <button class="btn-add"
                   data-id='${id}'
                   data-name='${name}'
-                  data-prize='${price}'
+                  data-price='${price}'
                   data-img='${img}'>Añadir</button>
           </div>
       </div>
@@ -166,7 +166,7 @@ const renderDestacadas = (product) => {
               <button class="btn-add"
                   data-id='${id}'
                   data-name='${name}'
-                  data-prize='${price}'
+                  data-price='${price}'
                   data-img='${img}'>Añadir</button>
           </div>
       </div>
