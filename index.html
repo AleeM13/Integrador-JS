@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2552e59c3c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Top Clothing</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo">
+            </div>
+            <div class="search">
+                <label for="input"></label>
+                <input type="text" id="input">
+                <span class="material-symbols-outlined">search</span>
+            </div>
+            <div class="user">
+                <span class="material-symbols-outlined">person</span>
+                <span class="material-symbols-outlined cartBtn">shopping_cart
+                <span class="counter"></span>
+                </span>
+            </div>
+        </nav>
+        <nav class="container-categories">
+            <ul class="category-list">
+                <li class="category active">Todo</li>
+                <li class="category" data-category="hombre">Hombre</li>
+                <li class="category" data-category="mujer">Mujer</li>
+                <li class="category" data-category="niños">Niños</li>
+                <li class="category" data-category="oferta">Oferta</li>
+                <li class="category" data-category="adidas"><img src="./img/menu_adidas.png" alt="Adidas"></li>
+                <li class="category" data-category="puma"><img src="./img/menu_puma.png" alt="Puma"></li>
+            </ul>
+        </nav>
+
+        <div class="cart">
+            <h2>Carrito</h2>
+            <div class="products-card">
+                <!-- <div class="product-card">
+                    <div class="img-cart">
+                        <img src="https://essential.vtexassets.com/arquivos/ids/646132-96-auto" alt="">
+                    </div>
+                    <div class="info-cart">
+                        <p>ZAPATILLAS ADIDAS ORIGINALS NMD_V3 SHOES</p>
+                        <span class="price-card">$47.999,00</span>
+                        <div class="buttons-cart">
+                            <span class="quantity-handler down" data-id=${id}>-</span>
+                            <span class="item-quantity">1</span>
+                            <span class="quantity-handler up" data-id=${id}>+</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="divisor"></div>
+            <div class="subtotal">
+                <p>Subtotal</p>
+                <span class="sub-total">$0.00</span>
+            </div>
+            <div class="price">
+                <p>Total</p>
+                <span class="total">$0.00</span>
+            </div>
+            <div class="divisor"></div>
+            <p class="gastos">Los gastos de envío serán calculados al finalizar tu compra</p>
+            <div class="buttons">
+                <button class="btn-buy">Finalizar compra</button>
+                <button class="btn-delete">Vaciar carrito</button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    <div class="hero-slider">
+        <ul>
+            <li><img src="./img/header.jpg" alt="Header"></li>
+            <li><img src="./img/header2.jpg" alt="Header"></li>
+            <li><img src="./img/header3.jpg" alt="Header"></li>
+            <li><img src="./img/header4.jpg" alt="Header"></li>
+            <li><img src="./img/header5.jpg" alt="Header"></li>
+            <li><img src="./img/header6.jpg" alt="Header"></li>
+        </ul>
+    </div>
+    <div class="modal"></div>
+    <section class="container-products">
+        <div class="products">
+            <div class="filtros">    
+                <h3>Filtrar por</h3>
+                <div class="check">
+                    <input id="zapatillas" type="checkbox">
+                    <label for="zapatillas">Zapatillas</label>
+                </div>
+                <div class="check">
+                    <input id="camperas" type="checkbox">
+                    <label for="camperas">Camperas</label>
+                </div>
+                <div class="check">
+                    <input id="buzos" type="checkbox">
+                    <label for="buzos">Buzos</label>
+                </div>
+                <div class="check">
+                    <input id="pantalones" type="checkbox">
+                    <label for="pantalones">Pantalones</label>
+                </div>
+                <div class="check">
+                    <input id="calzas" type="checkbox">
+                    <label for="calzas">Calzas</label>
+                </div>
+                <div class="check">
+                    <input id="remeras" type="checkbox">
+                    <label for="remeras">Remeras</label>
+                </div>
+                <div class="check">
+                    <input id="tops" type="checkbox">
+                    <label for="tops">Tops</label>
+                </div>
+                <div class="check">
+                    <input id="shorts" type="checkbox">
+                    <label for="shorts">Shorts</label>   
+                </div>
+            </div>
+            <div class="show-products">
+                <h2>Recomendados</h2>
+                <div class="cards-container">
+                    <!-- <div class="card">
+                        <img src="{img}" alt="{name}">
+                        <h3>{name}</h3>
+                        <span>{prize}</span>
+                        <div class="carrito">
+                            <p>Envío gratis</p>
+                            <button class="btn-add"
+                                data-id='${id}'
+                                data-name='${name}'
+                                data-prize='${prize}'
+                                data-img='${img}'>Añadir
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+                <button class="show-more">Mostrar más</button>
+            </div>
+        </div>
+    </section>
+    <section class="lanzamientos">
+        <h2>Lanzamientos</h2>
+        <div class="cards-lanzamientos">
+
+        </div>
+    </section>
+    <section class="destacados">
+        <h2>Destacados</h2>
+        <div class="cards-destacados">
+
+        </div>
+    </section>
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <div class="info">
+            <form>
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="Ingresa tu nombre">
+                <label for="email"></label>
+                <input type="email" placeholder="Ingresa tu correo">
+                <label for="msg"></label>
+                <textarea id="msg" placeholder="Ingresa tu mensaje"></textarea>
+                <input type="submit" id="enviar" value="Enviar">
+            </form>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1764.8417082421674!2d-64.26101487507782!3d-27.788727299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b52122ae452a5%3A0x4ed9c5c7e0f9c222!2sAvellaneda%2042%2C%20G4200%20Santiago%20del%20Estero!5e0!3m2!1ses!2sar!4v1668367717449!5m2!1ses!2sar" width="100%" height="250" style="border:0;" style="border-radius:4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>Nos encontramos en: Avellaneda 42</p>
+                <p>Santiago del Estero.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="text">
+            <p>Hecho por Alejandro Miranda</p>
+            <p>Copyright © 2022 TOP CLOTHING STORE. Todos los derechos reservados</p>
+            <div class="redes">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <img src="./img/logo.png" alt="Logo">
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
