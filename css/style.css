@@ -462,6 +462,7 @@ header {
     line-height: 1.2;
     font-weight: 500;
     padding: 10px 10px 5px 10px;
+    height: 49px;
 }
 
 .card span {
@@ -542,6 +543,7 @@ header {
     line-height: 1.2;
     font-weight: 500;
     padding: 10px 10px 5px 10px;
+    height: 49px;
 }
 
 .cards span {
