@@ -13,6 +13,7 @@ const overlay = document.querySelector('.overlay');
 const cardsLanzamientos = document.querySelector('.cards-lanzamientos');
 const cardsDestacados = document.querySelector('.cards-destacados');
 const successModal = document.querySelector('.modal');
+const input = document.getElementById('input');
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -132,7 +133,7 @@ const renderLanzamientos = (product) => {
     const { id, name, price, img } = product;
   
     return `
-      <div class="card">
+      <div class="cards">
           <img src="${img}" alt="${name}">
           <h3>${name}</h3>
           <span>$${price}</span>
@@ -157,7 +158,7 @@ const renderDestacadas = (product) => {
     const { id, name, price, img } = product;
   
     return `
-      <div class="card">
+      <div class="cards">
           <img src="${img}" alt="${name}">
           <h3>${name}</h3>
           <span>$${price}</span>
@@ -346,6 +347,14 @@ const deleteCart = () => {
     );
 };
 
+const searchClothes = (e) => {
+  document.querySelectorAll('.card').forEach(ropa => {
+    ropa.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+    ? ropa.classList.remove('hidden')
+    : ropa.classList.add('hidden')
+  })
+}
+
 const init = () => {
     renderProducts();
     renderCardsLanzamientos();
@@ -363,6 +372,7 @@ const init = () => {
     productsCart.addEventListener("click", handleQuantity);
     buyBtn.addEventListener("click", completeBuy);
     deleteBtn.addEventListener("click", deleteCart);
+    input.addEventListener('keyup', searchClothes);
     disableBtn(buyBtn);
     disableBtn(deleteBtn);
 };

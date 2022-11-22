@@ -510,6 +510,86 @@ header {
     margin-top: 30px;
 }
 
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 235px;
+    height: 392px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    background: #fff;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.cards:hover {
+    box-shadow: 0 0 2px 4px #e8e8e8;
+    transition: all .2s;
+}
+
+.cards img {
+    width: 212px;
+    height: 212px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.cards h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 10px 10px 5px 10px;
+}
+
+.cards span {
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.cards p {
+    padding: 15px 10px;
+    color: #ED6800;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.cards .carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.cards .carrito button {
+    border: 1px solid #fff;
+    outline: none;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.show-more {
+    align-self: center;
+    width: 170px;
+    height: 35px;
+    border: 1px solid #fff;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
 .lanzamientos {
     display: flex;
     flex-direction: column;
