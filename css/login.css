@@ -7,8 +7,127 @@
 }
 
 body {
-    background: #F5F5F5;
+    background: #f5f5f5;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    background: #000;
+    opacity: .9;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    width: 60%;
+    background: #000;
+    color: #fff;
+    opacity: .9;
+    cursor: pointer;
+    border: 1px solid #efefef;
+}
+
+.title h3 {
+    padding: 10px 15px;
+}
+
+.title .divisor {
+    width: 2px;
+    height: 39px;
+    background: #fff;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 320px;
+    height: 30px;
+    padding: 7px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    background: #fbc827;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+small {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    color: #fbc827;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.succes {
+    color: #00cc00;
+}
+
+.hidden {
+    display: none;
+}

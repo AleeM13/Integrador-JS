@@ -8,7 +8,39 @@
     <title>Cuenta</title>
 </head>
 <body>
-    
+    <main>
+        <div class="container">
+            <div class="title">
+                <h3 id="register" class="active">Registrarse</h3>
+                <div class="divisor"></div>
+                <h3 id="login">Iniciar Sesión</h3>
+            </div>
+            <div class="form-container">
+                <form class="register">
+                    <label for="name"></label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre completo">
+                    <label for="user"></label>
+                    <input type="text" id="user" placeholder="Ingresa tu nombre de usuario">
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="Ingresa tu correo electronico">
+                    <label for="pass"></label>
+                    <input type="password" id="pass" placeholder="Ingresa tu contreseña">
+                    <label for="phone"></label>
+                    <input type="text" id="phone" placeholder="Ingresa un número de telefono">
+                    <small></small>
+                    <button class="complete-reg">Registrarse</button>
+                </form>
+                <form class="login hidden">
+                    <label for="log-user"></label>
+                    <input type="text" id="log-user" placeholder="Nombre de usuario">
+                    <label for="log-pass"></label>
+                    <input type="password" id="log-pass" placeholder="Contreseña">
+                    <small></small>
+                    <button class="complete-log">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </main>
 
     <script src="./js/validations.js"></script>
 </body>
