@@ -499,18 +499,6 @@ header {
     align-self: center;
 }
 
-.show-more {
-    align-self: center;
-    width: 170px;
-    height: 35px;
-    border: 1px solid #fff;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 30px;
-}
-
 .cards {
     display: flex;
     flex-direction: column;
@@ -590,6 +578,7 @@ header {
     cursor: pointer;
     font-size: 14px;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .lanzamientos {
