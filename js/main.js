@@ -14,6 +14,7 @@ const cardsLanzamientos = document.querySelector('.cards-lanzamientos');
 const cardsDestacados = document.querySelector('.cards-destacados');
 const successModal = document.querySelector('.modal');
 const input = document.getElementById('input');
+const counter = document.querySelector('.counter');
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -205,6 +206,8 @@ const renderCartProduct = (cartProduct) => {
       return;
     }
     productsCart.innerHTML = cart.map(renderCartProduct).join("");
+    counter.innerHTML = "";
+    showCounter();
   };
   
   const getCartTotal = () => {
@@ -215,8 +218,8 @@ const renderCartProduct = (cartProduct) => {
   };
   
   const showTotal = () => {
-    total.innerHTML = `$${getCartTotal()}`;
-    subTotal.innerHTML = `$${getCartTotal()}`;
+    total.innerHTML = `$${getCartTotal().toFixed(3)}`;
+    subTotal.innerHTML = `$${getCartTotal().toFixed(3)}`;
   };
   
   const disableBtn = (btn) => {
@@ -249,7 +252,6 @@ const renderCartProduct = (cartProduct) => {
 
   const checkCartState = () => {
     saveLocalStorage(cart);
-    console.log(cart);
     renderCart(cart);
     showTotal(cart);
     disableBtn(buyBtn);
@@ -269,7 +271,6 @@ const addProduct = (e) => {
     const { id, name, price, img } = e.target.dataset;
   
     const product = createProductData(id, name, price, img);
-    console.log(product)
   
     if (isExistingCartProduct(product)) {
       addUnitToProduct(product);
@@ -284,7 +285,7 @@ const addProduct = (e) => {
 const substractProductUnit = (existingProduct) => {
     cart = cart.map((cartProduct) => {
       return cartProduct.id === existingProduct.id
-        ? { ...cartProduct, quantity: cartProduct.quantity - 1 }
+        ? { ...cartProduct, quantity: cartProduct.quantity - 1}
         : cartProduct;
     });
 };
@@ -293,7 +294,7 @@ const removeProductFromCart = (existingProduct) => {
     cart = cart.filter((product) => product.id !== existingProduct.id);
     checkCartState();
 };
-  
+
 const handleMinusBtnEvent = (id) => {
     const existingCartProduct = cart.find((item) => item.id === id);
   
@@ -310,7 +311,7 @@ const handlePlusBtnEvent = (id) => {
     const existingCartProduct = cart.find((item) => item.id === id);
     addUnitToProduct(existingCartProduct);
 };
-  
+
 const handleQuantity = (e) => {
     if (e.target.classList.contains("down")) {
       handleMinusBtnEvent(e.target.dataset.id);
@@ -323,6 +324,7 @@ const handleQuantity = (e) => {
 const resetCartItems = () => {
     cart = [];
     checkCartState();
+    showCounter();
 };
   
 const completeCartAction = (confirmMsg, successMsg) => {
@@ -353,6 +355,15 @@ const searchClothes = (e) => {
     ? ropa.classList.remove('hidden')
     : ropa.classList.add('hidden')
   })
+}
+
+const showCounter = () => {
+  if(cart.length >= 1) {
+    counter.classList.add('show-counter');
+    counter.innerText = cart.length;
+    return
+  }
+  counter.classList.remove('show-counter');
 }
 
 const init = () => {
