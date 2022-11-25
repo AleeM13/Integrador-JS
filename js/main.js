@@ -15,6 +15,8 @@ const cardsDestacados = document.querySelector('.cards-destacados');
 const successModal = document.querySelector('.modal');
 const input = document.getElementById('input');
 const counter = document.querySelector('.counter');
+const navMenu = document.querySelector('.container-categories');
+const barsMenu = document.querySelector('.menu-hamb');
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -111,6 +113,15 @@ const isLastIndexOF = () =>
     }
 };
 
+const toggleMenu = () => {
+  navMenu.classList.toggle("show-menu");
+  if (cartMenu.classList.contains("open-cart")) {
+    cartMenu.classList.remove("open-cart");
+    return;
+  }
+  overlay.classList.toggle("show-overlay");
+};
+
 const toggleCart = () => {
     cartMenu.classList.toggle("open-cart");
     overlay.classList.toggle("show-overlay");
@@ -124,7 +135,13 @@ const closeOnScroll = () => {
     cartMenu.classList.remove("open-cart");
     overlay.classList.remove("show-overlay");
 };
-  
+
+const closeOnClick = (e) => {
+  if (!e.target.classList.contains("category")) return;
+  navMenu.classList.remove("show-menu");
+  overlay.classList.remove("show-overlay");
+};
+
 const closeOnOverlayClick = () => {
     cartMenu.classList.remove("open-cart");
     overlay.classList.remove("show-overlay");
@@ -372,7 +389,9 @@ const init = () => {
     renderCardsDestacadas();
     categories.addEventListener("click", applyFilter);
     btnLoad.addEventListener("click", showMoreProducts);
+    navMenu.addEventListener('click', closeOnClick);
     cartBtn.addEventListener("click", toggleCart);
+    barsMenu.addEventListener('click', toggleMenu);
     window.addEventListener("scroll", closeOnScroll);
     overlay.addEventListener("click", closeOnOverlayClick);
     document.addEventListener("DOMContentLoaded", renderCart);
