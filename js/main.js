@@ -124,6 +124,10 @@ const toggleMenu = () => {
 
 const toggleCart = () => {
     cartMenu.classList.toggle("open-cart");
+    if (navMenu.classList.contains("show-menu")) {
+      navMenu.classList.remove("show-menu");
+      return;
+    }
     overlay.classList.toggle("show-overlay");
 };
 
@@ -144,6 +148,7 @@ const closeOnClick = (e) => {
 
 const closeOnOverlayClick = () => {
     cartMenu.classList.remove("open-cart");
+    navMenu.classList.remove("show-menu");
     overlay.classList.remove("show-overlay");
 };
 
