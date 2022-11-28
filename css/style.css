@@ -209,7 +209,7 @@ header {
     justify-content: start;
     align-items: flex-start;
     height: 100vh;
-    width: 28%;
+    width: 30%;
     padding-bottom: 30px;
     border-left: 1px solid #e8e8e8;
     transform: translateX(200%);
@@ -222,13 +222,16 @@ header {
     display: none;
 }
 
+.cartBtn {
+    position: relative;
+}
 
 .counter {
     display: none;
     position: absolute;
     font-size: 12px;
-    right: 25px;
-    top: 30px;
+    right: 0;
+    top: -5px;
     background: #EE7314;
     border-radius: 20px;
     padding: 3px;
@@ -808,7 +811,7 @@ footer img {
     color: #000;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
     .menu-hamb {
         width: 35px;
         height: 35px;
@@ -881,7 +884,7 @@ footer img {
         justify-content: start;
         align-items: flex-start;
         height: 100vh;
-        width: 28%;
+        width: 50%;
         padding-bottom: 30px;
         border-left: 1px solid #e8e8e8;
         transform: translateX(500%);
@@ -1281,5 +1284,55 @@ footer img {
 
     .show-menu {
         display: block;
-    }                                                                           
+    }
+    
+    .show-overlay {
+        display: block;
+    }
+    
+    .show-counter {
+        display: block;
+    }
+    
+    .open-cart {
+        transition: all .4s;
+        transform: translateX(0);
+    }
+    
+    .active {
+        color: #fbc827;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .modal {
+        display: none;
+    }
+    
+    .active-modal {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        bottom: 0;
+        font-size: 16px;
+        color: #000;
+        background: #00ff00;
+        width: 100%;
+    }
+    
+    .disabled {
+        opacity: .5;
+        cursor: not-allowed !important;
+    }
+    
+    .empty-msg {
+        text-align: center;
+        font-size: 15px;
+        margin-left: 15px;
+        color: #000;
+    }                                                                         
 }

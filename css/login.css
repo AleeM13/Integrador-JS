@@ -14,6 +14,7 @@ body {
     background-size: cover;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    min-height: 100vh;
 }
 
 img {
@@ -50,25 +51,17 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    width: 70%;
+    max-width: 90%;
     background: #000;
     color: #fff;
     opacity: .9;
     cursor: pointer;
-    border-bottom: 1px solid #efefef;
-    border-left: 1px solid #efefef;
-    border-right: 1px solid #efefef;
 }
 
 .title h3 {
     padding: 10px 15px;
     margin: 0 20px;
-}
-
-.title .divisor {
-    width: 2px;
-    height: 40px;
-    background: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .form-container {
@@ -137,4 +130,48 @@ small {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 90%;
+        height: 100%;
+    }
+    
+    .title {
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .title h3 {
+        padding: 10px;
+        margin: 0 12px;
+    }
+    
+    .register {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .login {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    input {
+        width: 280px;
+        height: 30px;
+    }
+
+    .hidden {
+        display: none;
+    }
 }

@@ -332,6 +332,7 @@ const handlePlusBtnEvent = (id) => {
 const handleQuantity = (e) => {
     if (e.target.classList.contains("down")) {
       handleMinusBtnEvent(e.target.dataset.id);
+      showCounter();
     } else if (e.target.classList.contains("up")) {
       handlePlusBtnEvent(e.target.dataset.id);
     }
@@ -377,7 +378,7 @@ const searchClothes = (e) => {
 const showCounter = () => {
   if(cart.length >= 1) {
     counter.classList.add('show-counter');
-    counter.innerText = cart.length;
+    counter.innerHTML = cart.length;
     return
   }
   counter.classList.remove('show-counter');
