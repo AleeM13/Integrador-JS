@@ -7,14 +7,22 @@
 }
 
 html {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background: #F5F5F5;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 header {
@@ -840,7 +848,26 @@ footer img {
     display: none;
 }
 
+.filter-title {
+    display: none;
+}
+
 @media (max-width: 860px) {
+    html {
+        position: fixed;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    body {
+        margin: 0;
+        width: 100vw; 
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch !important; 
+    }
+
     .menu-hamb {
         width: 35px;
         height: 35px;
@@ -907,7 +934,7 @@ footer img {
     
     .hero-slider ul li {
         width: 100%;
-        height: 220px;
+        height: 200px;
         list-style: none;
     }
     
@@ -1119,6 +1146,19 @@ footer img {
         padding-right: 10px;
     }
 
+    .filter-title {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1f1f20;
+        height: 45px;
+        width: 100%;
+        font-size: 18px;
+        color: #fff;
+    }
+
     .filtros-container {
         display: flex;
         flex-direction: column;
@@ -1144,12 +1184,17 @@ footer img {
         align-items: center;
         background: #fff;
         padding: 30px 0;
-        gap: 40px;
+        gap: 0px;
         border-left: 1px solid #e8e8e8;
         transform: translateX(500%);
         transition: all .5s;
+        overflow-y: scroll;
     }
     
+    .filtros::-webkit-scrollbar {
+        display: none;
+    }
+
     .filter-type {
         display: block;
         font-size: 17px;
@@ -1161,6 +1206,9 @@ footer img {
         cursor: pointer;
     }
 
+    .data {
+        margin: 30px 0;
+    }
 
     .show-products h2 {
         font-size: 20px;
