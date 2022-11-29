@@ -85,6 +85,7 @@ const miRopa = [
         price: 25.199,
         img: './img/hombre/buzo_hombre.jpg',
         category: 'hombre',
+        type: 'buzos',
     },
     {
         id: 12,
@@ -92,6 +93,7 @@ const miRopa = [
         price: 28.599,
         img: './img/hombre/buzo_hombre2.jpg',
         category: 'hombre',
+        type: 'buzos',
     },
     {
         id: 13,
@@ -99,6 +101,7 @@ const miRopa = [
         price: 28.999,
         img: './img/hombre/buzo_hombre3.jpg',
         category: 'hombre',
+        type: 'buzos',
     },
     {
         id: 14,
@@ -106,6 +109,7 @@ const miRopa = [
         price: 25.999,
         img: './img/hombre/pantalon_hombre.jpg',
         category: 'hombre',
+        type: 'pantalones',
     },
     {
         id: 15,
@@ -113,6 +117,7 @@ const miRopa = [
         price: 28.999,
         img: './img/hombre/pantalon_hombre2.jpg',
         category: 'hombre',
+        type: 'pantalones',
     },
     {
         id: 16,
@@ -120,6 +125,7 @@ const miRopa = [
         price: 13.199,
         img: './img/hombre/remera_hombre.jpg',
         category: 'hombre',
+        type: 'remeras',
     },
     {
         id: 17,
@@ -127,6 +133,7 @@ const miRopa = [
         price: 15.999,
         img: './img/hombre/remera_hombre2.jpg',
         category: 'hombre',
+        type: 'remeras'
     },
     {
         id: 18,
@@ -134,6 +141,7 @@ const miRopa = [
         price: 13.799,
         img: './img/hombre/remera_hombre3.jpg',
         category: 'hombre',
+        type: 'remeras'
     },
     {
         id: 19,
@@ -141,6 +149,7 @@ const miRopa = [
         price: 15.399,
         img: './img/hombre/short_hombre.jpg',
         category: 'hombre',
+        type: 'shorts',
     },
     {
         id: 20,
@@ -148,6 +157,7 @@ const miRopa = [
         price: 15.399,
         img: './img/hombre/short_hombre2.jpg',
         category: 'hombre',
+        type: 'shorts'
     },
     {
         id: 21,
@@ -187,6 +197,7 @@ const miRopa = [
         price: 42.899,
         img: './img/mujer/zapatilla_mujer5.jpg',
         category: 'mujer',
+        type: 'zapatillas',
     },
     {
         id: 26,
@@ -194,6 +205,7 @@ const miRopa = [
         price: 32.999,
         img: './img/mujer/zapatilla_mujer6.jpg',
         category: 'mujer',
+        type: 'zapatillas'
     },
     {
         id: 27,
@@ -201,6 +213,7 @@ const miRopa = [
         price: 44.399,
         img: './img/mujer/zapatilla_mujer8.jpg',
         category: 'mujer',
+        type: 'zapatillas'
     },
     {
         id: 28,
@@ -232,6 +245,7 @@ const miRopa = [
         price: 17.999,
         img: './img/mujer/buzo_mujer.jpg',
         category: 'mujer',
+        type: 'buzos',
     },
     {
         id: 32,
@@ -239,6 +253,7 @@ const miRopa = [
         price: 28.999,
         img: './img/mujer/buzo_mujer2.jpg',
         category: 'mujer',
+        type: 'buzos',
     },
     {
         id: 33,
@@ -246,6 +261,7 @@ const miRopa = [
         price: 15.999,
         img: './img/mujer/pantalon_mujer.jpg',
         category: 'mujer',
+        type: 'pantalones',
     },
     {
         id: 34,
@@ -253,6 +269,7 @@ const miRopa = [
         price: 18.699,
         img: './img/mujer/pantalon_mujer2.jpg',
         category: 'mujer',
+        type: 'pantalones',
     },
     {
         id: 35,
@@ -260,6 +277,7 @@ const miRopa = [
         price: 18.599,
         img: './img/mujer/calza_mujer.jpg',
         category: 'mujer',
+        type: 'calzas',
     },
     {
         id: 36,
@@ -267,6 +285,7 @@ const miRopa = [
         price: 22.199,
         img: './img/mujer/calza_mujer2.jpg',
         category: 'mujer',
+        type: 'calzas',
     },
     {
         id: 37,
@@ -274,6 +293,7 @@ const miRopa = [
         price: 7.499,
         img: './img/mujer/remera_mujer.jpg',
         category: 'mujer',
+        type: 'remeras',
     },
     {
         id: 38,
@@ -281,6 +301,7 @@ const miRopa = [
         price: 11.999,
         img: './img/mujer/remera_mujer2.jpg',
         category: 'mujer',
+        type: 'remeras',
     },
     {
         id: 39,
@@ -288,6 +309,7 @@ const miRopa = [
         price: 11.999,
         img: './img/mujer/top_mujer.jpg',
         category: 'mujer',
+        type: 'tops',
     },
     {
         id: 40,
@@ -295,6 +317,7 @@ const miRopa = [
         price: 29.399,
         img: './img/mujer/top_mujer2.jpg',
         category: 'mujer',
+        type: 'tops',
     },
     {
         id: 41,
@@ -302,6 +325,7 @@ const miRopa = [
         price: 14.999,
         img: './img/mujer/short_mujer.jpg',
         category: 'mujer',
+        type: 'shorts',
     },
     {
         id: 42,
@@ -309,6 +333,7 @@ const miRopa = [
         price: 19.999,
         img: './img/mujer/short_mujer2.jpg',
         category: 'mujer',
+        type: 'shorts',
     },
     {
         id: 43,
@@ -316,6 +341,7 @@ const miRopa = [
         price: 29.999,
         img: './img/niños/zapatilla_niños.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 44,
@@ -323,6 +349,7 @@ const miRopa = [
         price: 12.999,
         img: './img/niños/zapatilla_niños2.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 45,
@@ -330,6 +357,7 @@ const miRopa = [
         price: 19.999,
         img: './img/niños/zapatilla_niños3.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 46,
@@ -337,6 +365,7 @@ const miRopa = [
         price: 16.999,
         img: './img/niños/zapatilla_niños4.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 47,
@@ -344,6 +373,7 @@ const miRopa = [
         price: 25.999,
         img: './img/niños/zapatilla_niños5.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 48,
@@ -351,6 +381,7 @@ const miRopa = [
         price: 15.399,
         img: './img/niños/zapatilla_niños6.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 49,
@@ -358,6 +389,7 @@ const miRopa = [
         price: 14.990,
         img: './img/niños/zapatilla_niños7.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 50,
@@ -365,6 +397,7 @@ const miRopa = [
         price: 16.999,
         img: './img/niños/zapatilla_niños8.jpg',
         category: 'niños',
+        type: 'zapatillas',
     },
     {
         id: 51,
@@ -372,6 +405,7 @@ const miRopa = [
         price: 14.999,
         img: './img/niños/campera_niños.jpg',
         category: 'niños',
+        type: 'camperas',
     },
     {
         id: 52,
@@ -379,6 +413,7 @@ const miRopa = [
         price: 30.999,
         img: './img/niños/campera_niños2.jpg',
         category: 'niños',
+        type: 'camperas',
     },
     {
         id: 53,
@@ -386,6 +421,7 @@ const miRopa = [
         price: 16.799,
         img: './img/niños/buzo_niños.jpg',
         category: 'niños',
+        type: 'buzos',
     },
     {
         id: 54,
@@ -393,6 +429,7 @@ const miRopa = [
         price: 14.399,
         img: './img/niños/buzo_niños2.jpg',
         category: 'niños',
+        type: 'buzos',
     },
     {
         id: 55,
@@ -400,6 +437,7 @@ const miRopa = [
         price: 14.399,
         img: './img/niños/buzo_niños3.jpg',
         category: 'niños',
+        type: 'buzos',
     },
     {
         id: 56,
@@ -407,6 +445,7 @@ const miRopa = [
         price: 14.399,
         img: './img/niños/buzo_niños4.jpg',
         category: 'niños',
+        type: 'buzos',
     },
     {
         id: 57,
@@ -414,6 +453,7 @@ const miRopa = [
         price: 6.299,
         img: './img/niños/pantalon_niños.jpg',
         category: 'niños',
+        type: 'pantalones',
     },
     {
         id: 58,
@@ -421,6 +461,7 @@ const miRopa = [
         price: 13.999,
         img: './img/niños/pantalon_niños2.jpg',
         category: 'niños',
+        type: 'pantalones',
     },
     {
         id: 59,
@@ -428,6 +469,7 @@ const miRopa = [
         price: 7.199,
         img: './img/niños/remera_niños.jpg',
         category: 'niños',
+        type: 'remeras',
     },
     {
         id: 60,
@@ -435,6 +477,7 @@ const miRopa = [
         price: 5.639,
         img: './img/niños/remera_niños2.jpg',
         category: 'niños',
+        type: 'remeras',
     },
     {
         id: 61,
@@ -442,6 +485,7 @@ const miRopa = [
         price: 5.499,
         img: './img/niños/remera_niños3.jpg',
         category: 'niños',
+        type: 'remeras',
     },
     {
         id: 62,
@@ -449,6 +493,7 @@ const miRopa = [
         price: 8.499,
         img: './img/niños/remera_niños4.jpg',
         category: 'niños',
+        type: 'remeras',
     },
     {
         id: 63,
@@ -596,6 +641,7 @@ const miRopa = [
         price: 42.899,
         img: './img/adidas/adidas.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 84,
@@ -603,6 +649,7 @@ const miRopa = [
         price: 38.499,
         img: './img/adidas/adidas2.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 85,
@@ -610,6 +657,7 @@ const miRopa = [
         price: 55.999,
         img: './img/adidas/adidas3.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 86,
@@ -617,6 +665,7 @@ const miRopa = [
         price: 38.999,
         img: './img/adidas/adidas4.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 87,
@@ -624,6 +673,7 @@ const miRopa = [
         price: 55.999,
         img: './img/adidas/adidas5.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 88,
@@ -631,6 +681,7 @@ const miRopa = [
         price: 41.999,
         img: './img/adidas/adidas6.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 89,
@@ -638,6 +689,7 @@ const miRopa = [
         price: 40.699,
         img: './img/adidas/adidas7.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 90,
@@ -645,6 +697,7 @@ const miRopa = [
         price: 41.799,
         img: './img/adidas/adidas8.jpg',
         category: 'adidas',
+        type: 'zapatillas',
     },
     {
         id: 91,
@@ -652,6 +705,7 @@ const miRopa = [
         price: 27.999,
         img: './img/puma/puma.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 92,
@@ -659,6 +713,7 @@ const miRopa = [
         price: 27.999,
         img: './img/puma/puma2.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 93,
@@ -666,6 +721,7 @@ const miRopa = [
         price: 27.999,
         img: './img/puma/puma3.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 94,
@@ -673,6 +729,7 @@ const miRopa = [
         price: 32.999,
         img: './img/puma/puma4.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 95,
@@ -680,6 +737,7 @@ const miRopa = [
         price: 29.999,
         img: './img/puma/puma5.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 96,
@@ -687,6 +745,7 @@ const miRopa = [
         price: 24.999,
         img: './img/puma/puma6.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 97,
@@ -694,6 +753,7 @@ const miRopa = [
         price: 30.999,
         img: './img/puma/puma7.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
     {
         id: 98,
@@ -701,6 +761,7 @@ const miRopa = [
         price: 27.999,
         img: './img/puma/puma8.jpg',
         category: 'puma',
+        type: 'zapatillas',
     },
 ]
 

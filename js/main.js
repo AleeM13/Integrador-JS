@@ -17,6 +17,7 @@ const input = document.getElementById('input');
 const counter = document.querySelector('.counter');
 const navMenu = document.querySelector('.container-categories');
 const barsMenu = document.querySelector('.menu-hamb');
+const filterButton = document.querySelector('.filter-type');
 const typeContainer = document.querySelector('.filtros');
 const typeClothe = document.querySelectorAll('.data');
 
@@ -117,8 +118,19 @@ const isLastIndexOF = () =>
 
 const toggleMenu = () => {
   navMenu.classList.toggle("show-menu");
-  if (cartMenu.classList.contains("open-cart")) {
+  if (cartMenu.classList.contains("open-cart") || typeContainer.classList.contains("open-filter")) {
     cartMenu.classList.remove("open-cart");
+    typeContainer.classList.remove("open-filter");
+    return;
+  }
+  overlay.classList.toggle("show-overlay");
+};
+
+const toggleFilter = () => {
+  typeContainer.classList.toggle("open-filter");
+  if (cartMenu.classList.contains("open-cart") || navMenu.classList.contains("show-menu")) {
+    cartMenu.classList.remove("open-cart");
+    navMenu.classList.remove("show-menu")
     return;
   }
   overlay.classList.toggle("show-overlay");
@@ -126,8 +138,9 @@ const toggleMenu = () => {
 
 const toggleCart = () => {
     cartMenu.classList.toggle("open-cart");
-    if (navMenu.classList.contains("show-menu")) {
+    if (navMenu.classList.contains("show-menu") || typeContainer.classList.contains("open-filter")) {
       navMenu.classList.remove("show-menu");
+      typeContainer.classList.remove("open-filter");
       return;
     }
     overlay.classList.toggle("show-overlay");
@@ -135,22 +148,25 @@ const toggleCart = () => {
 
 const closeOnScroll = () => {
     if (
-      !cartMenu.classList.contains("open-cart")
+      !cartMenu.classList.contains("open-cart") || !typeContainer.classList.contains("open-filter")
     )
       return;
     cartMenu.classList.remove("open-cart");
+    typeContainer.classList.remove("open-filter")
     overlay.classList.remove("show-overlay");
 };
 
 const closeOnClick = (e) => {
-  if (!e.target.classList.contains("category")) return;
+  if (!e.target.classList.contains("category") && !e.target.classList.contains("data")) return;
   navMenu.classList.remove("show-menu");
+  typeContainer.classList.remove("open-filter");
   overlay.classList.remove("show-overlay");
 };
 
 const closeOnOverlayClick = () => {
     cartMenu.classList.remove("open-cart");
     navMenu.classList.remove("show-menu");
+    typeContainer.classList.remove("open-filter");
     overlay.classList.remove("show-overlay");
 };
 
@@ -444,8 +460,10 @@ const init = () => {
     typeContainer.addEventListener('click', applyFilterType);
     btnLoad.addEventListener("click", showMoreProducts);
     navMenu.addEventListener('click', closeOnClick);
+    typeContainer.addEventListener('click', closeOnClick);
     cartBtn.addEventListener("click", toggleCart);
     barsMenu.addEventListener('click', toggleMenu);
+    filterButton.addEventListener('click', toggleFilter);
     window.addEventListener("scroll", closeOnScroll);
     overlay.addEventListener("click", closeOnOverlayClick);
     document.addEventListener("DOMContentLoaded", renderCart);
