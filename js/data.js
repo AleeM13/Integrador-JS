@@ -5,6 +5,7 @@ const miRopa = [
         price: 55.999,
         img: './img/hombre/zapatilla_hombre.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const miRopa = [
         price: 47.999,
         img: './img/hombre/zapatilla_hombre2.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const miRopa = [
         price: 34.099,
         img: './img/hombre/zapatilla_hombre3.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const miRopa = [
         price: 29.999,
         img: './img/hombre/zapatilla_hombre4.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ const miRopa = [
         price: 32.599,
         img: './img/hombre/zapatilla_hombre5.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ const miRopa = [
         price: 65.999,
         img: './img/hombre/zapatilla_hombre6.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ const miRopa = [
         price: 33.599,
         img: './img/hombre/zapatilla_hombre7.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 8,
@@ -54,6 +61,7 @@ const miRopa = [
         price: 34.099,
         img: './img/hombre/zapatilla_hombre8.jpg',
         category: 'hombre',
+        type: 'zapatillas',
     },
     {
         id: 9,
@@ -61,6 +69,7 @@ const miRopa = [
         price: 28.999,
         img: './img/hombre/campera_hombre.jpg',
         category: 'hombre',
+        type: 'camperas',
     },
     {
         id: 10,
@@ -68,6 +77,7 @@ const miRopa = [
         price: 32.999,
         img: './img/hombre/campera_hombre2.jpg',
         category: 'hombre',
+        type: 'camperas',
     },
     {
         id: 11,
@@ -145,6 +155,7 @@ const miRopa = [
         price: 27.999,
         img: './img/mujer/zapatilla_mujer.jpg',
         category: 'mujer',
+        type: 'zapatillas',
     },
     {
         id: 22,
@@ -152,6 +163,7 @@ const miRopa = [
         price: 27.999,
         img: './img/mujer/zapatilla_mujer2.jpg',
         category: 'mujer',
+        type: 'zapatillas'
     },
     {
         id: 23,
@@ -159,6 +171,7 @@ const miRopa = [
         price: 31.999,
         img: './img/mujer/zapatilla_mujer3.jpg',
         category: 'mujer',
+        type: 'zapatillas',
     },
     {
         id: 24,
@@ -166,6 +179,7 @@ const miRopa = [
         price: 30.699,
         img: './img/mujer/zapatilla_mujer4.jpg',
         category: 'mujer',
+        type: 'zapatillas',
     },
     {
         id: 25,
@@ -194,6 +208,7 @@ const miRopa = [
         price: 28.999,
         img: './img/mujer/campera_mujer.jpg',
         category: 'mujer',
+        type: 'camperas',
     },
     {
         id: 29,
@@ -201,6 +216,7 @@ const miRopa = [
         price: 35.999,
         img: './img/mujer/campera_mujer2.jpg',
         category: 'mujer',
+        type: 'camperas',
     },
     {
         id: 30,
@@ -208,6 +224,7 @@ const miRopa = [
         price: 25.290,
         img: './img/mujer/campera_mujer3.jpg',
         category: 'mujer',
+        type: 'camperas',
     },
     {
         id: 31,

@@ -17,6 +17,8 @@ const input = document.getElementById('input');
 const counter = document.querySelector('.counter');
 const navMenu = document.querySelector('.container-categories');
 const barsMenu = document.querySelector('.menu-hamb');
+const typeContainer = document.querySelector('.filtros');
+const typeClothe = document.querySelectorAll('.data');
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -389,11 +391,57 @@ const showCounter = () => {
   counter.classList.remove('show-counter');
 }
 
+const renderFilteredTypeProducts = (type) => {
+  const productsList = miRopa.filter(
+    (product) => product.type === type
+  );
+  products.innerHTML = productsList.map(renderProduct).join("");
+};
+
+const renderProductsType = (index = 0, type = undefined) => {
+  if (!type) {
+    renderDividedProducts(index);
+    return;
+  }
+  renderFilteredTypeProducts(type);
+};
+
+const changeFilterType = (e) => {
+  const selectedCategory = e.target.dataset.type;
+  changeBtnActiveType(selectedCategory);
+  changeShowMoreBtnState(selectedCategory);
+};
+
+const changeBtnActiveType = (selectedCategory) => {
+  const typeClothes = [...typeClothe];
+  typeClothes.forEach((typeBtn) => {
+    if (typeBtn.dataset.type !== selectedCategory) {
+      typeBtn.classList.remove("active");
+      return;
+    }
+    typeBtn.classList.toggle("active");
+  });
+};
+
+const applyFilterType = (e) => {
+  if (!e.target.classList.contains("data")) return;
+  changeFilterType(e);
+  if (!e.target.dataset.type) {
+    products.innerHTML = "";
+    renderProductsType();
+  } else {
+    renderProductsType(0, e.target.dataset.type);
+    productsController.nextProductsIndex = 1;
+  }
+};
+
+
 const init = () => {
     renderProducts();
     renderCardsLanzamientos();
     renderCardsDestacadas();
     categories.addEventListener("click", applyFilter);
+    typeContainer.addEventListener('click', applyFilterType);
     btnLoad.addEventListener("click", showMoreProducts);
     navMenu.addEventListener('click', closeOnClick);
     cartBtn.addEventListener("click", toggleCart);
