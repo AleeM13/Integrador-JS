@@ -29,6 +29,12 @@ const loginForm = document.querySelector('.login');
 const logUserInput = document.getElementById('log-user');
 const logPassInput = document.getElementById('log-pass');
 
+let user = JSON.parse(localStorage.getItem("user")) || [];
+
+const saveLocalStorage = (userList) => {
+  localStorage.setItem("user", JSON.stringify(userList));
+};
+
 const checkUsername = () => {
     let valid = false;
     const min = 3;
@@ -131,9 +137,14 @@ regForm.addEventListener("submit", (e) => {
     let isFormValid = isUsernameValid && isEmailValid && isPasswordValid && isPhoneValid;
   
     if(isFormValid){
-      regForm.submit();
-      window.location = 'index.html';
+      changeLogin();
     }
+
+    let data = {
+      username: userInput.value.trim(),
+      password: passInput.value.trim(),
+    }
+    saveLocalStorage(data);
 });
 
 const checkLogUsername = () => {
@@ -144,8 +155,6 @@ const checkLogUsername = () => {
     
     if(isEmpty(username)){
       showError(logUserInput, "El nombre de usuario es obligatorio") 
-    } else if(!isBetween(username.length, min, max)) {
-      showError(logUserInput, `El nombre debe tener entre ${min} y ${max} caracteres`)
     } else {
       showSuccess(logUserInput); 
       valid = true;
@@ -158,8 +167,6 @@ const checkLogPassword = () => {
     const password = logPassInput.value.trim();
     if(isEmpty(password)){
       showError(logPassInput, 'La contraseña es obligatoria')
-    } else if(!isPassValid(password)){
-      showError(logPassInput, 'La contraseña debe contener al menos 8 caracteres, una mayuscula, una minuscula y un caracter especial')
     } else {
       showSuccess(logPassInput);
       valid = true;
@@ -169,13 +176,15 @@ const checkLogPassword = () => {
 
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    let isUserValid = logUserInput.value.trim() === user.username && logPassInput.value.trim() === user.password;
     let isLogUsernameValid = checkLogUsername();
     let isLogUPasswordValid = checkLogPassword();
-    let isLogFormValid = isLogUsernameValid && isLogUPasswordValid;
+    let isLogFormValid = isLogUsernameValid && isLogUPasswordValid && isUserValid;
     if(isLogFormValid){
         loginForm.submit();
         window.location = 'index.html';
+    } else {
+      showError(logPassInput, 'El nombre de usuario o la contraseña son incorrectos.')
     }
 })
 
@@ -209,15 +218,3 @@ regForm.addEventListener(
       }
     })
 )
-  
-const user = {
-    id: 1,
-    username: 'username.value',
-    password: '.value',
-    email: '.value',
-    phone: ''
-}
-  
-const arrUsers = [1,2,3,4,];
-  
-checkUsername();
