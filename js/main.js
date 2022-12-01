@@ -435,7 +435,7 @@ const changeBtnActiveType = (selectedCategory) => {
       typeBtn.classList.remove("active");
       return;
     }
-    typeBtn.classList.toggle("active");
+    typeBtn.classList.add("active");
   });
 };
 
